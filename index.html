@@ -1,171 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Katta - Comprehensive Analytical Report</title>
+    <title>Career Katta - Analytical Report</title>
     <link rel="shortcut icon" href="ck-png.webp" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#1e3a8a',
-                        },
-                        slate: {
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    }
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: { 50: '#f0f7ff', 100: '#e0effe', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' } }
                 }
             }
         }
     </script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .asymmetric-grid {
-            height: 520px;
-            position: relative;
-        }
-
-        .grid-photo {
-            position: absolute;
-            border-radius: 1.5rem;
-            object-fit: cover;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .grid-photo:hover {
-            transform: scale(1.05) translateY(-8px);
-            z-index: 30;
-            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
-        }
+        html { scroll-behavior: smooth; }
+        .asymmetric-grid { height: 520px; position: relative; }
+        .grid-photo { position: absolute; border-radius: 1.5rem; object-fit: cover; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transition: all 0.4s ease; }
+        .grid-photo:hover { transform: scale(1.05) translateY(-8px); z-index: 30; box-shadow: 0 25px 50px -12px rgba(37,99,235,0.25); }
     </style>
 </head>
-
 <body class="font-sans bg-slate-50 text-slate-800 antialiased">
 
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center gap-3">
-                    <a class="navbar-brand d-flex align-items-center fw-bold text-primary gap-3 pl-2rem" href="#">
-                        <img src="ck-png.webp" alt="Logo Placeholder" class="rounded-circle border"
-                            style="width: 50px; height: 50px; object-fit: contain; background-color: #f1f5f9;">
-                        <span> </span>
-                    </a>
+                    <a href="#"><img src="ck-png.webp" alt="Career Katta Logo" class="rounded-full border" style="width:50px;height:50px;object-fit:contain;background-color:#f1f5f9;"></a>
                 </div>
                 <div class="hidden lg:flex items-center gap-4 text-sm font-medium text-slate-600">
-                    <a href="#introduction" class="hover:text-brand-600 transition hover:underline w">Introduction</a>
-                    <a href="#framework" class="hover:text-brand-600 transition">Institutional Framework</a>
-                    <a href="#ecosystem" class="hover:text-brand-600 transition">Ecosystem</a>
-                    <a href="#planb" class="hover:text-brand-600 transition">Plan B Shift</a>
-                    <a href="#challenges" class="hover:text-brand-600 transition">Administrative Challenges</a>
-                    <!-- <a href="#solar" class="hover:text-brand-600 transition">Solar Initiative</a>
-                    <a href="#impact" class="hover:text-brand-600 transition">Viksit Bharat 2047</a> -->
+                    <a href="#introduction" class="hover:text-brand-600 transition">Introduction</a>
+                    <a href="#framework" class="hover:text-brand-600 transition">Structure</a>
+                    <a href="#ecosystem" class="hover:text-brand-600 transition">Programs</a>
+                    <a href="#planb" class="hover:text-brand-600 transition">Plan B</a>
+                    <a href="#challenges" class="hover:text-brand-600 transition">Finance</a>
                 </div>
-                <div>
-                    <span
-                        class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Official Analytical Report
-                    </span>
-                </div>
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Official Report</span>
             </div>
         </div>
     </nav>
 
-    <!-- ==================== अपडेट केलेला HEADER विभाग ==================== -->
-    <header class="relative bg-cover bg-center py-20 px-4 md:px-12" style="background-image: url('header.jpeg');">
-
-        <!-- इमेजवरील टेक्स्ट व्यवस्थित दिसण्यासाठी काळ्या रंगाचा हलका लेयर (Overlay) -->
+    <header class="relative bg-cover bg-center py-20 px-4 md:px-12" style="background-image:url('header.jpeg');">
         <div class="absolute inset-0 bg-slate-900/75 backdrop-blur-[1px]"></div>
-
-        <!-- डाव्या बाजूचा लोगो (Left Logo) -->
         <div class="absolute top-4 left-4 md:top-6 md:left-8 z-20">
-            <img src="mitsc-png.png" alt="Left Logo" class="h-12 w-12 md:h-16 md:w-16 object-contain drop-shadow-md">
+            <img src="mitsc-png.png" alt="MITSC Logo" class="h-12 w-12 md:h-16 md:w-16 object-contain drop-shadow-md">
         </div>
-
-        <!-- उजव्या बाजूचा लोगो (Right Logo) -->
         <div class="absolute top-4 right-4 md:top-6 md:right-8 z-20">
-            <img src="ck-png.webp" alt="Right Logo" class="h-12 w-12 md:h-16 md:w-16 object-contain drop-shadow-md">
+            <img src="ck-png.webp" alt="Career Katta Logo" class="h-12 w-12 md:h-16 md:w-16 object-contain drop-shadow-md">
         </div>
-
-        <!-- मुख्य कंटेंट -->
         <div class="relative z-10 max-w-5xl mx-auto text-center text-white mt-8 md:mt-0">
-            <span
-                class="text-brand-100 uppercase font-bold text-sm tracking-widest bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm inline-block max-w-[90%] md:max-w-full">
+            <span class="text-brand-100 uppercase font-bold text-sm tracking-widest bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm inline-block">
                 MITSC & Department of Higher and Technical Education, Maharashtra
             </span>
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mt-6 tracking-tight leading-tight">
-                Career Katta: Higher Education, Rural Empowerment, & Sustainable Development
+                Career Katta: Better Education, Rural Growth & a Brighter Future
             </h1>
-            <p class="text-base md:text-lg lg:text-xl text-slate-300 mt-6 max-w-3xl mx-auto font-light">
-                An explicit, data-driven analytical breakdown assessing institutional implementation, technological
-                infrastructure, structural mindset pivots, and grassroots impact.
+            <p class="text-base md:text-lg text-slate-300 mt-6 max-w-3xl mx-auto font-light">
+                A clear and simple report on how Career Katta is helping students across Maharashtra find better jobs, learn new skills, and build a strong future — especially in villages and small towns.
             </p>
         </div>
     </header>
-    <!-- =================================================================== -->
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
         <section id="introduction" class="scroll-mt-20">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
-                    <div
-                        class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
+                    <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
                         <i class="fa-solid fa-circle-info"></i> 01
                     </div>
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Introduction & Strategic Policy Background
-                    </h2>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">What is Career Katta and Why Was It Started?</h2>
                     <div class="h-1 w-20 bg-brand-600 rounded"></div>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        For decades, a structural disconnect has persisted between Maharashtra's traditional higher
-                        education system and evolving corporate deployment mandates. Graduating millions of students
-                        annually, the ecosystem faced critical friction due to deficiencies in professional
-                        skill-mapping, communications, and specialized technical execution frameworks.
+                        For many years, students who passed college exams in Maharashtra still struggled to find good jobs. They had degrees, but they lacked important skills — like good communication, practical knowledge, and technical know-how — that companies actually look for.
                     </p>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        To neutralize this gap and bridge ecosystems according to the mandates of the <strong>National
-                            Education Policy (NEP 2020)</strong>, the Department of Higher and Technical Education,
-                        Government of Maharashtra, partnered with the <strong>Maharashtra Information Technology Support
-                            Center (MITSC)</strong> to establish the <strong>'Career Katta'</strong> initiative. This
-                        ecosystem synthesizes Swami Vivekananda’s vision of youth empowerment with Dr. A.P.J. Abdul
-                        Kalam's <em>'India 2020'</em> structural paradigm to build technology-enabled educational
-                        pathways directly to rural and semi-urban demographic zones.
+                        To fix this problem, the Maharashtra government's Department of Higher and Technical Education joined hands with <strong>MITSC (Maharashtra Information Technology Support Center)</strong> to start <strong>Career Katta</strong>. This program uses technology to bring career guidance and skill training directly to students — even in remote villages and small towns.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        It is inspired by the values of Swami Vivekananda (youth empowerment) and Dr. A.P.J. Abdul Kalam (building a strong India through education and technology).
                     </p>
                 </div>
                 <div class="lg:col-span-5">
                     <div class="asymmetric-grid">
-                        <img src="1st.jpeg" alt="Policy Infrastructure Discussion"
-                            class="grid-photo grid-img img-1 w-[60%] h-[280px] top-0 left-4 z-20 border-4 border-white">
-                        <img src="2nd.jpeg" alt="Students in Classroom Setup"
-                            class="grid-photo grid-img img-2 w-[55%] h-[220px] bottom-8 right-4 z-10 border-4 border-white">
-                        <div
-                            class="absolute top-[40%] right-10 bg-white p-4 rounded-xl shadow-xl z-20 animate-bounce max-w-[180px] border border-slate-100">
-                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Strategic Goal</p>
-                            <p class="text-sm font-extrabold text-slate-800">NEP 2020 Alignment</p>
+                        <img src="1st.jpeg" alt="Policy Discussion" class="grid-photo w-[60%] h-[280px] top-0 left-4 z-20 border-4 border-white">
+                        <img src="2nd.jpeg" alt="Students in Session" class="grid-photo w-[55%] h-[220px] bottom-8 right-4 z-10 border-4 border-white">
+                        <div class="absolute top-[40%] right-10 bg-white p-4 rounded-xl shadow-xl z-20 animate-bounce max-w-[180px] border border-slate-100">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Main Goal</p>
+                            <p class="text-sm font-extrabold text-slate-800">NEP 2020 Education Reform</p>
                         </div>
                     </div>
                 </div>
@@ -178,58 +107,41 @@
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5 order-last lg:order-first">
                     <div class="asymmetric-grid">
-                        <img src="3rd.jpeg" alt="Institutional Training Workshop"
-                            class="grid-photo w-[50%] h-[300px] top-4 right-4 z-10 rounded-br-[4rem] border-4 border-white">
-                        <img src="4th.jpeg" alt="Leadership Core Strategy Meeting"
-                            class="grid-photo w-[65%] h-[240px] bottom-4 left-4 z-20 border-4 border-white">
+                        <img src="3rd.jpeg" alt="Training Workshop" class="grid-photo w-[50%] h-[300px] top-4 right-4 z-10 rounded-br-[4rem] border-4 border-white">
+                        <img src="4th.jpeg" alt="Leadership Meeting" class="grid-photo w-[65%] h-[240px] bottom-4 left-4 z-20 border-4 border-white">
                     </div>
                 </div>
                 <div class="lg:col-span-7 space-y-6">
-                    <div
-                        class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
+                    <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
                         <i class="fa-solid fa-sitemap"></i> 02
                     </div>
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Institutional Framework & Leadership's Ideological Vision
-                    </h2>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">How is Career Katta Organized?</h2>
                     <div class="h-1 w-20 bg-brand-600 rounded"></div>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        MITSC is established under the **Societies Registration Act of 1860**, maintaining its strategic
-                        operational headquarters at the Women's Bank Basement, Khasbag Maidan, Kolhapur. Under the
-                        executive leadership of Founder-President <strong>Mr. Yashwant Shitole</strong>, the institution
-                        orchestrates its youth-centric mandates via a structural mesh of over 100 specialized Youth
-                        Welfare Centers.
+                        MITSC was registered under the Societies Registration Act of 1860. Its main office is at Mahila Bank Basement, Khasbag Maidan, Kolhapur. It is led by its Founder-President, <strong>Mr. Yashwant Shitole</strong>, and runs through more than 100 Youth Welfare Centers across Maharashtra.
                     </p>
-                    <blockquote
-                        class="border-l-4 border-brand-600 pl-4 my-4 italic text-slate-700 bg-brand-50/50 py-2 pr-2 rounded-r-lg">
-                        "Are you a functional mobile User or merely a platform Customer?"
+                    <blockquote class="border-l-4 border-brand-600 pl-4 my-4 italic text-slate-700 bg-brand-50/50 py-2 pr-2 rounded-r-lg">
+                        "Are you actually using your phone well — or are you just scrolling it?"
                     </blockquote>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        During strategic orientation conferences at regional institutions—including Dadapatil Rajale
-                        College, Babuji Avhad College (Pathardi), Pemraj College, and Shri Dhokeshwar College
-                        (Parner)—Mr. Shitole introduced the concept of tracking career assets via **Career SIPs
-                        (Systematic Investment Planning)**, requiring continuous micro-investments of daily focus into
-                        high-yield technical proficiencies. Furthermore, at Appasaheb Garud College (Shendurni,
-                        Jalgaon), he initiated a structural mindset pivot, urging rural demographics to shift away from
-                        passive consumption to dedicating at least three hours daily to mastering <strong>Artificial
-                            Intelligence (AI)</strong> frameworks.
+                        At college visits across Maharashtra, Mr. Shitole encourages students to think of their career like a savings plan: invest a little time every day into learning useful skills. He urges rural students especially to spend at least 3 hours daily learning <strong>Artificial Intelligence (AI)</strong> — the technology that is changing every job in the world.
                     </p>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
                         <div class="p-3 bg-white rounded-xl border border-slate-200 text-center shadow-sm">
                             <span class="block font-bold text-brand-600 text-sm">Garje Marathi</span>
-                            <span class="text-xs text-slate-400">Global Heritage</span>
+                            <span class="text-xs text-slate-400">Global Marathi Pride</span>
                         </div>
                         <div class="p-3 bg-white rounded-xl border border-slate-200 text-center shadow-sm">
                             <span class="block font-bold text-brand-600 text-sm">Bharat Cares</span>
-                            <span class="text-xs text-slate-400">Digital Welfare</span>
+                            <span class="text-xs text-slate-400">Digital Help for All</span>
                         </div>
                         <div class="p-3 bg-white rounded-xl border border-slate-200 text-center shadow-sm">
                             <span class="block font-bold text-brand-600 text-sm">Kokan Kanya</span>
-                            <span class="text-xs text-slate-400">Women Venture</span>
+                            <span class="text-xs text-slate-400">Women Business Support</span>
                         </div>
                         <div class="p-3 bg-white rounded-xl border border-slate-200 text-center shadow-sm">
                             <span class="block font-bold text-brand-600 text-sm">Madhur Kranti</span>
-                            <span class="text-xs text-slate-400">Agri-Innovation</span>
+                            <span class="text-xs text-slate-400">Better Farming Ideas</span>
                         </div>
                     </div>
                 </div>
@@ -240,155 +152,100 @@
 
         <section id="ecosystem" class="scroll-mt-20">
             <div class="space-y-6">
-                <div
-                    class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
+                <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
                     <i class="fa-solid fa-layer-group"></i> 03
                 </div>
-                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-                    The 'Career Katta' Ecosystem: Next-Gen Technology & Infrastructure
-                </h2>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">What Does Career Katta Actually Do?</h2>
                 <div class="h-1 w-20 bg-brand-600 rounded"></div>
                 <p class="text-slate-600 leading-relaxed max-w-4xl">
-                    Far from functioning as a static lecturing sequence, Career Katta operates as an enterprise-grade
-                    **Learning Management System (LMS)** ecosystem. It interconnects over **5,000 academic
-                    institutions** across Maharashtra, managing a real-time ledger of over **200,000 active students**.
+                    Career Katta is much more than a lecture program. It is a complete learning system that connects over <strong>5,000 colleges</strong> across Maharashtra and helps more than <strong>2,00,000 students</strong> at the same time — all through their phones and the internet.
                 </p>
-
                 <div class="grid md:grid-cols-3 gap-8 pt-6">
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                        <div
-                            class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900">Mobile LMS Delivery</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            The Android deployment application delivers synchronized live modules, contextual video
-                            parsing layers, automated push updates, and scalable notification channels to maintain
-                            continuity.
-                        </p>
+                        <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h3 class="text-lg font-bold text-slate-900">Learning on Your Phone</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Students can access live classes, videos, and updates through a simple Android app — no laptop or expensive equipment needed.</p>
                     </div>
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                        <div
-                            class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900">AI-Driven Evaluation</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Includes automated AI analytics, game-based benchmarking quizzes, and real-time response
-                            tracks to automatically compile customized development roadmaps for individual students.
-                        </p>
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="text-lg font-bold text-slate-900">Smart Progress Tracking</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">The system uses AI to track each student's progress and suggests a personalized learning plan — like having a personal career guide.</p>
                     </div>
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                        <div
-                            class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900">Cryptographic Verification</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Secures corporate trust via a public certificate identification registry. Recruiters execute
-                            instant verification using Captcha controls paired with absolute session tracking logs.
-                        </p>
+                        <div class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="text-lg font-bold text-slate-900">Verified Certificates</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Students get certificates that companies can easily verify online — making it easier to trust and hire Career Katta graduates.</p>
                     </div>
                 </div>
 
                 <div class="pt-8">
-                    <h3 class="text-xl font-bold text-slate-900 mb-4">Curricular Taxonomy & Targeted Impact Matrices
-                    </h3>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Courses Offered & Who They Help</h3>
                     <div class="overflow-x-auto border border-slate-200 rounded-xl shadow-sm">
                         <table class="w-full text-left border-collapse bg-white">
                             <thead>
                                 <tr class="bg-slate-950 text-slate-200 text-xs font-semibold uppercase tracking-wider">
-                                    <th class="p-4 border-b border-slate-200">Program Identity</th>
-                                    <th class="p-4 border-b border-slate-200">Operational Methodology & Scope</th>
-                                    <th class="p-4 border-b border-slate-200">Beneficiary Target Demographic</th>
+                                    <th class="p-4 border-b border-slate-200">Course Name</th>
+                                    <th class="p-4 border-b border-slate-200">What It Does</th>
+                                    <th class="p-4 border-b border-slate-200">Who It Helps</th>
                                 </tr>
                             </thead>
                             <tbody class="text-sm divide-y divide-slate-100 text-slate-600">
                                 <tr>
                                     <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">IAS Aaplya Bhetila</td>
-                                    <td class="p-4">Daily 17:00-19:00 dynamic interactive live forums hosted by
-                                        serving/retired civil servants to break down UPSC/MPSC strategy.</td>
-                                    <td class="p-4">Rural civil service aspirants constrained by high commercial
-                                        coaching fee vectors.</td>
+                                    <td class="p-4">Every day from 5–7 PM, IAS and government officers talk directly to students and explain how to prepare for UPSC and MPSC exams.</td>
+                                    <td class="p-4">Village students who cannot afford costly coaching classes in cities.</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Udyojak Aaplya Bhetila
-                                    </td>
-                                    <td class="p-4">Industrial leadership roundtables matching young innovators with
-                                        3,500+ corporate operators to shift mentalities from Job Seekers to Job
-                                        Creators.</td>
-                                    <td class="p-4">Incubated enterprise teams, tech-startups, and Plan B tactical
-                                        pivoting graduates.</td>
+                                    <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Udyojak Aaplya Bhetila</td>
+                                    <td class="p-4">Successful business owners meet students and teach them how to start and grow their own business — not just look for a job.</td>
+                                    <td class="p-4">Students who want to become job creators, not just job seekers.</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Vrittavedh</td>
-                                    <td class="p-4">Systematic parsing, decoding, and analytical synthesis of daily
-                                        global current affairs optimized for competitive exams.</td>
-                                    <td class="p-4">All candidates testing across public administration and state-wide
-                                        examinations.</td>
+                                    <td class="p-4">Daily news is explained in a simple way to help students answer current affairs questions in government exams.</td>
+                                    <td class="p-4">Anyone preparing for government exams.</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Indian Constitution</td>
-                                    <td class="p-4">Simplifying the structural text, legal frameworks, and citizen
-                                        rights of India's foundational legal document (Featured at K.J. Somaiya
-                                        College).</td>
-                                    <td class="p-4">Civilian communities, law departments, and student bodies aiming to
-                                        strengthen democratic literacy.</td>
+                                    <td class="p-4">India's Constitution — the rule book of our country — is explained in easy language so every student understands their rights.</td>
+                                    <td class="p-4">Students, citizens, and anyone who wants to understand Indian law.</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">EQ Club</td>
-                                    <td class="p-4">Focuses on building Emotional Intelligence, stress management
-                                        frameworks, emotional regulation systems, and empathy maps.</td>
-                                    <td class="p-4">Students navigating psychological strain, testing anxiety, or mental
-                                        health friction.</td>
+                                    <td class="p-4">Helps students manage stress, handle emotions, and build confidence — important for exams and life in general.</td>
+                                    <td class="p-4">Students who feel anxious or overwhelmed during exam preparation.</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Digital Marketing</td>
-                                    <td class="p-4">Technical pipeline tutorials on content creation optimization,
-                                        Advanced SEO execution, and corporate performance tracking.</td>
-                                    <td class="p-4">Aspiring digital consultants, freelancers, and small enterprise web
-                                        technicians.</td>
+                                    <td class="p-4">Teaches how to grow a business online using social media, Google, and content creation tools.</td>
+                                    <td class="p-4">Students who want to work from home or start a freelancing career.</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Communication Skills
-                                    </td>
-                                    <td class="p-4">Targeted conversational English language pathways and soft skills
-                                        deployment to fulfill minister Uday Samant's goal of training 100,000 students.
-                                    </td>
-                                    <td class="p-4">Rural demographics facing linguistic isolation during corporate
-                                        evaluation boards.</td>
+                                    <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Communication Skills</td>
+                                    <td class="p-4">Helps students speak English better and improve their overall communication — a skill every company wants.</td>
+                                    <td class="p-4">Rural students who struggle with English in job interviews.</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Indian Knowledge System
-                                    </td>
-                                    <td class="p-4">Academic investigation into historical philosophical paradigms,
-                                        ancient science systems, and cultural technologies in modern settings.</td>
-                                    <td class="p-4">Research scholars, cultural historians, and students analyzing
-                                        classical indigenous inheritances.</td>
+                                    <td class="p-4 font-semibold text-slate-900 bg-slate-50/50">Indian Knowledge System</td>
+                                    <td class="p-4">Explores India's ancient wisdom, science, and culture — and how it connects to today's world.</td>
+                                    <td class="p-4">Students interested in history, culture, and research.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <div
-                    class="mt-6 bg-gradient-to-r from-brand-50 to-indigo-50 border border-brand-200 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div class="mt-6 bg-gradient-to-r from-brand-50 to-indigo-50 border border-brand-200 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div class="space-y-2">
-                        <span
-                            class="bg-brand-600 text-white text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider">Proven
-                            Execution Value</span>
-                        <h4 class="text-lg font-bold text-slate-900">Measurable Placement Milestones</h4>
+                        <span class="bg-brand-600 text-white text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider">Real Results</span>
+                        <h4 class="text-lg font-bold text-slate-900">Students Are Getting Jobs</h4>
                         <p class="text-sm text-slate-600 max-w-3xl">
-                            Over <strong>2,800 candidates</strong> have secured verified roles within public
-                            administration and state departments. Corporate transitions are equally visible: a student
-                            named Isha leveraged Career Katta's specialized platform to optimize her SQL proficiency,
-                            problem-solving speed, and resume design, successfully scaling her career to secure a Data
-                            Analyst position at **Zeta**.
+                            More than <strong>2,800 students</strong> have already secured government jobs after using Career Katta. Private sector placements are also growing — for example, a student named Isha used Career Katta to improve her data skills and got a job at <strong>Zeta</strong>, a top technology company.
                         </p>
                     </div>
                     <div class="text-center md:text-right min-w-[140px]">
                         <span class="block text-3xl font-black text-brand-600">2,800+</span>
-                        <span class="text-xs font-semibold text-slate-500 uppercase">Govt Placements</span>
+                        <span class="text-xs font-semibold text-slate-500 uppercase">Govt Jobs Secured</span>
                     </div>
                 </div>
             </div>
@@ -399,41 +256,25 @@
         <section id="planb" class="scroll-mt-20">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
-                    <div
-                        class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
+                    <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
                         <i class="fa-solid fa-shield-cat"></i> 04
                     </div>
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-                        The 'Plan B' Model: Mitigating Rural Psychological & Structural Stagnation
-                    </h2>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">The 'Plan B' Idea: Always Have a Backup Plan</h2>
                     <div class="h-1 w-20 bg-brand-600 rounded"></div>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        A critical challenge in regional higher education is the psychological stagnation caused by
-                        prolonged focus on competitive public exams. Data shows that hundreds of thousands of students
-                        migrate from rural communities to preparation hubs in cities like Pune, Mumbai, Chhatrapati
-                        Sambhajinagar, or Delhi, exhausting family financial reserves and years of peak productivity.
-                        Because only a small percentage secure positions, the structural fallout leaves thousands facing
-                        severe depression, age-limit challenges, and compounding economic stress.
+                        Many students from villages spend years — and their family's savings — preparing for government jobs in big cities like Pune, Mumbai, or Delhi. But only a small number of students get selected. The rest often return home feeling lost, stressed, and unsure about their future.
                     </p>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        To counter this cycle, MITSC and the state government actively promote the <strong>'Plan B'
-                            strategic paradigm</strong>. This framework guides students to build an alternative
-                        professional path right from day one, preparing them to shift directions smoothly if needed.
+                        Career Katta teaches students to always have a <strong>"Plan B"</strong> — a backup career option they are building at the same time. This way, even if a student doesn't get the government job, they already have skills and options to fall back on.
                     </p>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        To back this approach with infrastructure, the state is integrating institutional **Incubation
-                        Centers** and **Model Skill Development Centers (MSDC)** into campuses. While existing state
-                        centers support just 740 students, Career Katta aims to build localized facilities supporting
-                        **10,000 active exam candidates** alongside **5,000 startup operators** under the Plan B
-                        network, helping bridge the rural-urban opportunities divide.
+                        The government is also helping by setting up <strong>Skill Development Centers</strong> and <strong>Startup Support Centers</strong> inside colleges. The goal is to support 10,000 exam students and 5,000 young business starters — giving everyone a fair chance, no matter where they come from.
                     </p>
                 </div>
                 <div class="lg:col-span-5">
                     <div class="asymmetric-grid">
-                        <img src="5th.jpeg" alt="Student Counseling Session"
-                            class="grid-photo w-[55%] h-[260px] top-4 left-4 z-10 border-4 border-white rounded-tl-[3rem]">
-                        <img src="6th.jpeg" alt="Incubation Center Laboratory"
-                            class="grid-photo w-[60%] h-[240px] bottom-4 right-4 z-20 border-4 border-white">
+                        <img src="5th.jpeg" alt="Student Counseling" class="grid-photo w-[55%] h-[260px] top-4 left-4 z-10 border-4 border-white rounded-tl-[3rem]">
+                        <img src="6th.jpeg" alt="Skill Center" class="grid-photo w-[60%] h-[240px] bottom-4 right-4 z-20 border-4 border-white">
                     </div>
                 </div>
             </div>
@@ -446,201 +287,123 @@
                 <div class="lg:col-span-5 order-last lg:order-first">
                     <div class="asymmetric-grid">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600"
-                            alt="Financial Modeling Spreadsheet Overview"
-                            class="grid-photo w-[65%] h-[230px] top-8 left-2 z-20 border-4 border-white">
+                            alt="Financial Planning" class="grid-photo w-[65%] h-[230px] top-8 left-2 z-20 border-4 border-white">
                         <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=500"
-                            alt="University Administration Complex"
-                            class="grid-photo w-[55%] h-[280px] bottom-4 right-2 z-10 border-4 border-white rounded-tr-[4rem]">
+                            alt="University Campus" class="grid-photo w-[55%] h-[280px] bottom-4 right-2 z-10 border-4 border-white rounded-tr-[4rem]">
                     </div>
                 </div>
                 <div class="lg:col-span-7 space-y-6">
-                    <div
-                        class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
+                    <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1 rounded-md text-brand-700 text-sm font-semibold">
                         <i class="fa-solid fa-scale-balanced"></i> 05
                     </div>
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Financial Architecture, Fiscal Friction, & Governance Adjustments
-                    </h2>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">How Much Does It Cost? And What Happened in 2025?</h2>
                     <div class="h-1 w-20 bg-brand-600 rounded"></div>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        The operational financing of Career Katta relies on an affordable model: a one-time entry
-                        processing fee of **₹365 for a 3-year term** (averaging roughly ₹0.33 per day). This fee
-                        structure is designed to encourage student accountability and value for the program.
-                        Structurally, these funds are designed to be reimbursed to students via subsidy pathways
-                        integrated into the Choice Based Credit System (CBCS) examination accounts.
+                        Career Katta is designed to be affordable for every student. The fee is just <strong>₹365 for 3 years</strong> — that is less than ₹1 per day! This small amount is meant to be refunded to students through the college fee system. So in many cases, students get it almost free.
                     </p>
-
                     <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl space-y-3">
                         <h4 class="text-amber-900 font-bold flex items-center gap-2 text-sm">
-                            <i class="fa-solid fa-triangle-exclamation"></i> The October 2025 Mandate & Policy Friction
+                            <i class="fa-solid fa-triangle-exclamation"></i> What Happened in October 2025?
                         </h4>
                         <p class="text-xs text-amber-800 leading-relaxed">
-                            On **October 19, 2025**, the Directorate of Higher Education (DHE) issued an administrative
-                            directive transforming this optional platform into a mandatory item within official
-                            university extra-curricular/activity fee schedules. Institutions like SPPU, NMU, and SRTMUN
-                            ordered immediate compliance by November 30, 2025, triggering public pushback based on three
-                            issues:
+                            On <strong>19 October 2025</strong>, the government made Career Katta compulsory for all college students. Universities like SPPU, NMU, and SRTMUN were asked to collect the fee by 30 November 2025. This caused some concerns:
                         </p>
                         <ul class="list-disc list-inside text-xs text-amber-800 space-y-1 pl-2">
-                            <li><strong>Economic Coercion:</strong> Mandatory fees added financial pressure onto student
-                                populations dealing with recent flood damages.</li>
-                            <li><strong>Autonomy Conflict:</strong> Compulsory fees conflicted with the autonomous
-                                operational frameworks of independent colleges.</li>
+                            <li><strong>Financial burden:</strong> Some students — especially those affected by recent floods — found it difficult to pay even ₹365 at that time.</li>
+                            <li><strong>College independence:</strong> Some colleges felt that making it mandatory went against their right to make their own decisions about fees.</li>
                         </ul>
+                        <p class="text-xs text-amber-800 leading-relaxed mt-2">
+                            These concerns are being heard and discussed by the government to find a fair solution for everyone.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
-    <!-- ==================== FOOTER SECTION ==================== -->
+
     <footer class="relative bg-gradient-to-b from-[#6baad6] to-[#4e8bb7] text-white pt-16 font-sans overflow-hidden">
-
-        <!-- तिरपी बॅकग्राउंड डिझाइन (Angled Bottom Overlay) -->
-        <div class="absolute inset-x-0 bottom-0 h-24 bg-[#3d6c8f]/40 -skew-y-2 origin-bottom-right pointer-events-none">
-        </div>
-
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-[#3d6c8f]/40 -skew-y-2 origin-bottom-right pointer-events-none"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
-
-                <!-- कॉलम १: लोगो आणि संक्षिप्त माहिती -->
                 <div class="lg:col-span-4 space-y-6">
                     <div class="flex items-center gap-3">
-                        <img src="ck-png.webp" alt="MITSC Logo"
-                            class="h-12 w-12 object-contain bg-white/90 rounded-full p-1 shadow-sm">
+                        <img src="ck-png.webp" alt="MITSC Logo" class="h-12 w-12 object-contain bg-white/90 rounded-full p-1 shadow-sm">
                         <span class="text-2xl font-bold tracking-wide">MITSC</span>
                     </div>
                     <p class="text-blue-50/90 text-sm leading-relaxed max-w-sm">
-                        Maharashtra Information Technology Support Center - Empowering digital transformation and
-                        innovation across Maharashtra.
+                        Maharashtra Information Technology Support Center — Helping students across Maharashtra learn, grow, and build a better future.
                     </p>
                     <div class="pt-2">
-                        <a href="https://play.google.com/store/search?q=career%20katta&c=apps" target="_blank"
-                            class="inline-block transition transform hover:scale-105">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                alt="Get it on Google Play" class="h-11 w-auto">
+                        <a href="https://play.google.com/store/search?q=career%20katta&c=apps" target="_blank" class="inline-block transition transform hover:scale-105">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-11 w-auto">
                         </a>
                     </div>
                 </div>
-
-                <!-- कॉलम २: Quick Links -->
                 <div class="lg:col-span-2 space-y-4">
-                    <h4
-                        class="text-lg font-bold tracking-wide border-b-2 border-white/20 pb-2 inline-block min-w-[100px]">
-                        Quick Links</h4>
+                    <h4 class="text-lg font-bold tracking-wide border-b-2 border-white/20 pb-2 inline-block min-w-[100px]">Quick Links</h4>
                     <ul class="space-y-2.5 text-sm text-blue-50/80">
-                        <li><a href="#introduction" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Our Team</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Recent Events</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Courses</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Get In Touch</a></li>
+                        <li><a href="#introduction" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Our Team</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Recent Events</a></li>
+                        <li><a href="#ecosystem" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Courses</a></li>
+                        <li><a href="#challenges" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Contact</a></li>
                     </ul>
                 </div>
-
-                <!-- कॉलम ३: Explore -->
                 <div class="lg:col-span-2 space-y-4">
-                    <h4
-                        class="text-lg font-bold tracking-wide border-b-2 border-white/20 pb-2 inline-block min-w-[80px]">
-                        Explore</h4>
+                    <h4 class="text-lg font-bold tracking-wide border-b-2 border-white/20 pb-2 inline-block min-w-[80px]">Explore</h4>
                     <ul class="space-y-2.5 text-sm text-blue-50/80">
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Advisory Board</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Downloads</a></li>
-                        <li><a href="#ecosystem" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Career Katta</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Gallery</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span
-                                    class="text-[10px] opacity-60">›</span> Career Sansad</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Advisory Board</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Downloads</a></li>
+                        <li><a href="#ecosystem" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Career Katta</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Gallery</a></li>
+                        <li><a href="#" class="hover:text-white transition flex items-center gap-1.5"><span class="text-[10px] opacity-60">›</span> Career Sansad</a></li>
                     </ul>
                 </div>
-
-                <!-- कॉलम ४: Official Information -->
                 <div class="lg:col-span-4 space-y-5">
-                    <h4
-                        class="text-lg font-bold tracking-wide border-b-2 border-white/20 pb-2 inline-block min-w-[160px]">
-                        Official Information</h4>
-
+                    <h4 class="text-lg font-bold tracking-wide border-b-2 border-white/20 pb-2 inline-block min-w-[160px]">Contact Us</h4>
                     <div class="space-y-4">
-                        <!-- पत्ता -->
                         <div class="flex items-start gap-3">
-                            <div
-                                class="bg-blue-400/30 p-2.5 rounded-full text-white mt-1 flex items-center justify-center w-9 h-9 shrink-0">
-                                <i class="fa-solid fa-location-dot text-sm"></i>
-                            </div>
+                            <div class="bg-blue-400/30 p-2.5 rounded-full text-white mt-1 flex items-center justify-center w-9 h-9 shrink-0"><i class="fa-solid fa-location-dot text-sm"></i></div>
                             <div class="text-sm">
                                 <strong class="block text-white mb-0.5">Address</strong>
-                                <span class="text-blue-50/80 leading-relaxed">Mahila Bank Basement, Khasbag Maidan,
-                                    Kolhapur-416012</span>
+                                <span class="text-blue-50/80 leading-relaxed">Mahila Bank Basement, Khasbag Maidan, Kolhapur - 416012</span>
                             </div>
                         </div>
-
-                        <!-- ईमेल -->
                         <div class="flex items-start gap-3">
-                            <div
-                                class="bg-blue-400/30 p-2.5 rounded-full text-white mt-1 flex items-center justify-center w-9 h-9 shrink-0">
-                                <i class="fa-solid fa-envelope text-sm"></i>
-                            </div>
+                            <div class="bg-blue-400/30 p-2.5 rounded-full text-white mt-1 flex items-center justify-center w-9 h-9 shrink-0"><i class="fa-solid fa-envelope text-sm"></i></div>
                             <div class="text-sm">
                                 <strong class="block text-white mb-0.5">Email</strong>
-                                <a href="mailto:careerkatta365@gmail.com"
-                                    class="text-blue-50/80 hover:text-white transition">careerkatta365@gmail.com</a>
+                                <a href="mailto:careerkatta365@gmail.com" class="text-blue-50/80 hover:text-white transition">careerkatta365@gmail.com</a>
                             </div>
                         </div>
-
-                        <!-- फोन नंबर -->
                         <div class="flex items-start gap-3">
-                            <div
-                                class="bg-blue-400/30 p-2.5 rounded-full text-white mt-1 flex items-center justify-center w-9 h-9 shrink-0">
-                                <i class="fa-solid fa-phone text-sm"></i>
-                            </div>
+                            <div class="bg-blue-400/30 p-2.5 rounded-full text-white mt-1 flex items-center justify-center w-9 h-9 shrink-0"><i class="fa-solid fa-phone text-sm"></i></div>
                             <div class="text-sm">
                                 <strong class="block text-white mb-0.5">Phone</strong>
-                                <a href="tel:7507652555"
-                                    class="text-blue-50/80 hover:text-white transition tracking-wide">7507652555</a>
+                                <a href="tel:7507652555" class="text-blue-50/80 hover:text-white transition tracking-wide">7507652555</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-        <!-- तळपट्टी (Bottom Bar) -->
         <div class="relative z-10 bg-[#355f7e] text-blue-100/80 py-5 border-t border-white/10">
-            <div
-                class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
                 <p>© 2026 <strong class="text-white font-semibold">MITSC</strong>. All rights reserved.</p>
-
-                <!-- सोशल मीडिया आयकॉन्स -->
                 <div class="flex items-center gap-4">
                     <span class="text-xs font-medium tracking-wide uppercase opacity-70">Follow Us:</span>
                     <div class="flex items-center gap-2">
-                        <a href="#"
-                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i
-                                class="fa-brands fa-facebook-f text-xs"></i></a>
-                        <a href="#"
-                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i
-                                class="fa-brands fa-x-twitter text-xs"></i></a>
-                        <a href="#"
-                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i
-                                class="fa-brands fa-instagram text-xs"></i></a>
-                        <a href="#"
-                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i
-                                class="fa-brands fa-linkedin-in text-xs"></i></a>
-                        <a href="#"
-                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i
-                                class="fa-brands fa-youtube text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i class="fa-brands fa-instagram text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-[#355f7e] transition"><i class="fa-brands fa-youtube text-xs"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-</body>
 
+</body>
 </html>
