@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --brand-50: #f0f7ff;
@@ -20,36 +22,36 @@
             --brand-900: #1e3a8a;
             --brand-200: #bfdbfe;
         }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
+            font-size: 16px;
+            font-family: "Spline Sans", sans-serif;
+            color: black;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         .asymmetric-grid {
             height: 520px;
             position: relative;
         }
-        
+
         .grid-photo {
             position: absolute;
             border-radius: 1.5rem;
             object-fit: cover;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease;
         }
-        
+
         .grid-photo:hover {
             transform: scale(1.05) translateY(-8px);
             z-index: 30 !important;
-            box-shadow: 0 25px 50px -12px rgba(37,99,235,0.25);
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
         }
-        
+
         .nav-sticky {
             position: sticky;
             top: 0;
@@ -58,26 +60,26 @@
             backdrop-filter: blur(12px);
             border-bottom: 1px solid #e2e8f0;
         }
-        
+
         .header-bg {
             background-size: cover;
             background-position: center;
-            padding: 5rem 1rem;
+            padding: 2rem 1rem;
             position: relative;
         }
-        
+
         .header-overlay {
             position: absolute;
             inset: 0;
             background-color: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(1px);
         }
-        
+
         .header-content {
             position: relative;
             z-index: 10;
         }
-        
+
         .header-badge {
             color: #f0f7ff;
             text-transform: uppercase;
@@ -91,48 +93,27 @@
             display: inline-block;
             margin-bottom: 1.5rem;
         }
-        
-        .header-logo {
-            position: absolute;
-            z-index: 20;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-        }
-        
-        .header-logo-top {
-            top: 1rem;
-            left: 1rem;
-        }
-        
-        .header-logo-right {
-            top: 1rem;
-            right: 1rem;
-        }
-        
+
         @media (min-width: 768px) {
             .header-logo-top {
                 top: 1.5rem;
                 left: 2rem;
             }
-            
+
             .header-logo-right {
                 top: 1.5rem;
                 right: 2rem;
             }
         }
-        
-        .header-logo img {
-            height: 3rem;
-            width: 3rem;
-            object-fit: contain;
-        }
-        
+
+
         @media (min-width: 768px) {
             .header-logo img {
                 height: 4rem;
                 width: 4rem;
             }
         }
-        
+
         .section-badge {
             display: inline-flex;
             align-items: center;
@@ -145,28 +126,28 @@
             font-size: 0.875rem;
             font-weight: 600;
         }
-        
+
         .underline-brand {
             height: 0.25rem;
             width: 5rem;
             background-color: var(--brand-600);
             border-radius: 0.25rem;
         }
-        
+
         .card-feature {
             background-color: white;
             padding: 1.5rem;
             border-radius: 1rem;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .card-feature:hover {
             transform: translateY(-4px);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         .icon-box {
             width: 3rem;
             height: 3rem;
@@ -176,26 +157,26 @@
             justify-content: center;
             font-size: 1.25rem;
         }
-        
+
         .icon-blue {
             background-color: #dbeafe;
             color: #2563eb;
         }
-        
+
         .icon-indigo {
             background-color: #e0e7ff;
             color: #4f46e5;
         }
-        
+
         .icon-emerald {
             background-color: #d1fae5;
             color: #059669;
         }
-        
+
         .table-custom {
             background-color: white;
         }
-        
+
         .table-custom thead {
             background-color: #0f172a;
             color: #e2e8f0;
@@ -204,23 +185,23 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        
+
         .table-custom tbody tr {
             border-bottom: 1px solid #e5e7eb;
         }
-        
+
         .table-custom tbody td {
             padding: 1rem;
             font-size: 0.875rem;
             color: #4b5563;
         }
-        
+
         .table-custom tbody tr td:first-child {
             background-color: #f9fafb;
             font-weight: 600;
             color: #111827;
         }
-        
+
         .results-box {
             background: linear-gradient(to right, var(--brand-50), #e0e7ff);
             border: 1px solid var(--brand-200);
@@ -230,7 +211,7 @@
             flex-direction: column;
             gap: 1.5rem;
         }
-        
+
         @media (min-width: 768px) {
             .results-box {
                 flex-direction: row;
@@ -238,7 +219,7 @@
                 justify-content: space-between;
             }
         }
-        
+
         .results-badge {
             background-color: var(--brand-600);
             color: white;
@@ -251,48 +232,48 @@
             display: inline-block;
             width: fit-content;
         }
-        
+
         .alert-amber {
             background-color: #fffbeb;
             border-left: 4px solid #f59e0b;
             padding: 1rem;
             border-radius: 0.5rem;
         }
-        
+
         .alert-amber h4 {
             color: #78350f;
             font-weight: 700;
             font-size: 0.875rem;
             margin-bottom: 0.75rem;
         }
-        
+
         .alert-amber p,
         .alert-amber li {
             color: #92400e;
             font-size: 0.75rem;
             line-height: 1.5;
         }
-        
+
         .alert-amber ul {
             margin-left: 0.5rem;
             padding-left: 1rem;
         }
-        
+
         .alert-amber li {
             margin-bottom: 0.25rem;
         }
-        
+
         .footer-bg {
             background: linear-gradient(to bottom, #6baad6, #4e8bb7);
             color: white;
         }
-        
+
         .footer-bottom-section {
             background-color: #355f7e;
             color: #9bc4dd;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .footer-icon {
             width: 2rem;
             height: 2rem;
@@ -303,12 +284,12 @@
             justify-content: center;
             transition: all 0.3s ease;
         }
-        
+
         .footer-icon:hover {
             background-color: white;
             color: #355f7e;
         }
-        
+
         .footer-section-title {
             font-size: 1.125rem;
             font-weight: 700;
@@ -318,7 +299,7 @@
             display: inline-block;
             margin-bottom: 1rem;
         }
-        
+
         .footer-link {
             display: flex;
             align-items: center;
@@ -328,11 +309,11 @@
             font-size: 0.875rem;
             transition: color 0.3s ease;
         }
-        
+
         .footer-link:hover {
             color: white;
         }
-        
+
         .footer-icon-contact {
             background-color: rgba(96, 165, 250, 0.2);
             padding: 0.625rem;
@@ -347,12 +328,12 @@
             margin-top: 0.25rem;
             font-size: 0.875rem;
         }
-        
+
         .hr-custom {
             border-color: #e2e8f0;
             margin: 6rem 0;
         }
-        
+
         .logo-footer {
             height: 3rem;
             width: 3rem;
@@ -360,18 +341,25 @@
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             padding: 0.25rem;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
-        
+
         .bounce-animation {
             animation: bounce 2s infinite;
         }
-        
+
         @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
-        
+
         .blockquote-custom {
             border-left: 4px solid var(--brand-600);
             padding-left: 1rem;
@@ -382,16 +370,16 @@
             padding: 0.5rem 0.5rem 0.5rem 1rem;
             border-radius: 0.5rem;
         }
-        
+
         .mini-card {
             padding: 0.75rem;
             background-color: white;
             border-radius: 0.75rem;
             border: 1px solid #e2e8f0;
             text-align: center;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
-        
+
         .mini-card span:first-child {
             display: block;
             font-weight: 600;
@@ -399,18 +387,24 @@
             font-size: 0.875rem;
             margin-bottom: 0.25rem;
         }
-        
+
         .mini-card span:last-child {
             display: block;
             font-size: 0.75rem;
             color: #9ca3af;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -418,18 +412,12 @@
         <div class="container-lg">
             <div class="d-flex align-items-center justify-content-between h-auto py-3">
                 <div class="d-flex align-items-center gap-2">
-                    <a href="#">
-                        <img src="ck-png.webp" alt="Career Katta Logo" class="rounded-circle border" style="width:50px;height:50px;object-fit:contain;background-color:#f1f5f9;">
-                    </a>
+
                 </div>
-                <div class="d-none d-lg-flex align-items-center gap-3" style="font-size: 0.875rem; font-weight: 500; color: #475569;">
-                    <a href="#introduction" class="text-decoration-none" style="color: #475569; transition: color 0.3s;">Introduction</a>
-                    <a href="#framework" class="text-decoration-none" style="color: #475569; transition: color 0.3s;">Structure</a>
-                    <a href="#ecosystem" class="text-decoration-none" style="color: #475569; transition: color 0.3s;">Programs</a>
-                    <a href="#planb" class="text-decoration-none" style="color: #475569; transition: color 0.3s;">Plan B</a>
-                    <a href="#challenges" class="text-decoration-none" style="color: #475569; transition: color 0.3s;">Finance</a>
-                </div>
-                <span class="badge" style="background-color: #d1fae5; color: #047857; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Official Report</span>
+
+                <span class="badge"
+                    style="background-color: #d1fae5; color: #047857; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Official
+                    Report</span>
             </div>
         </div>
     </nav>
@@ -438,21 +426,15 @@
     <header class="header-bg" style="background-image:url('header.jpeg');">
         <div class="header-overlay"></div>
         <div class="header-logo header-logo-top">
-            <img src="hedm.webp" alt="Goverment Logo">
+            <!-- <img src="hedm.webp" alt="Goverment Logo"> -->
         </div>
         <div class="header-logo header-logo-right">
-            <img src="mitsc-png.png" alt="MITSC Logo">
+            <!-- <img src="mitsc-png.png" alt="MITSC Logo"> -->
         </div>
-        <div class="container-lg header-content text-center text-white">
-            <div class="header-badge">
-                MITSC & Department of Higher and Technical Education, Maharashtra
-            </div>
-            <h1 class="display-4 fw-bolder mt-4 mb-4" style="letter-spacing: -0.02em; line-height: 1.2;">
-                Career Katta: Better Education, Rural Growth & a Brighter Future
+        <div class="container-lg header-content text-left text-white fw-bold m-5 py-5">
+            <h1 class="fw-bold" style="font-size: 3rem; letter-spacing: 0.5px;">
+                Career Katta
             </h1>
-            <p class="fs-5 text-light mb-0" style="max-width: 48rem; margin-left: auto; margin-right: auto; font-weight: 300;">
-                A clear and simple report on how Career Katta is helping students across Maharashtra find better jobs, learn new skills, and build a strong future — especially in villages and small towns.
-            </p>
         </div>
     </header>
 
@@ -471,22 +453,34 @@
                     <h2 class="display-6 fw-bolder mb-3">What is Career Katta and Why Was It Started?</h2>
                     <div class="underline-brand mb-4"></div>
                     <p class="text-secondary lh-lg mb-3">
-                        For many years, students who passed college exams in Maharashtra still struggled to find good jobs. They had degrees, but they lacked important skills — like good communication, practical knowledge, and technical know-how — that companies actually look for.
+                        For many years, students who passed college exams in Maharashtra still struggled to find good
+                        jobs. They had degrees, but they lacked important skills — like good communication, practical
+                        knowledge, and technical know-how — that companies actually look for.
                     </p>
                     <p class="text-secondary lh-lg mb-3">
-                        To fix this problem, the Maharashtra government's Department of Higher and Technical Education joined hands with <strong>MITSC (Maharashtra Information Technology Support Center)</strong> to start <strong>Career Katta</strong>. This program uses technology to bring career guidance and skill training directly to students — even in remote villages and small towns.
+                        To fix this problem, the Maharashtra government's Department of Higher and Technical Education
+                        joined hands with <strong>MITSC (Maharashtra Information Technology Support Center)</strong> to
+                        start <strong>Career Katta</strong>. This program uses technology to bring career guidance and
+                        skill training directly to students — even in remote villages and small towns.
                     </p>
                     <p class="text-secondary lh-lg">
-                        It is inspired by the values of Swami Vivekananda (youth empowerment) and Dr. A.P.J. Abdul Kalam (building a strong India through education and technology).
+                        It is inspired by the values of Swami Vivekananda (youth empowerment) and Dr. A.P.J. Abdul Kalam
+                        (building a strong India through education and technology).
                     </p>
                 </div>
                 <div class="col-lg-5">
                     <div class="asymmetric-grid">
-                        <img src="1st.jpeg" alt="Policy Discussion" class="grid-photo border-4 border-white" style="width: 60%; height: 280px; top: 0; left: 1rem; z-index: 20;">
-                        <img src="2nd.jpeg" alt="Students in Session" class="grid-photo border-4 border-white" style="width: 55%; height: 220px; bottom: 2rem; right: 1rem; z-index: 10;">
-                        <div class="position-absolute p-3 bg-white rounded-3 shadow-lg bounce-animation border border-light" style="top: 40%; right: 2.5rem; z-index: 20; max-width: 180px;">
-                            <p class="mb-0" style="font-size: 0.75rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em;">Main Goal</p>
-                            <p class="mb-0" style="font-size: 0.875rem; font-weight: 800; color: #1f2937;">NEP 2020 Education Reform</p>
+                        <img src="1st.jpeg" alt="Policy Discussion" class="grid-photo border-4 border-white"
+                            style="width: 60%; height: 280px; top: 0; left: 1rem; z-index: 20;">
+                        <img src="2nd.jpeg" alt="Students in Session" class="grid-photo border-4 border-white"
+                            style="width: 55%; height: 220px; bottom: 2rem; right: 1rem; z-index: 10;">
+                        <div class="position-absolute p-3 bg-white rounded-3 shadow-lg bounce-animation border border-light"
+                            style="top: 40%; right: 2.5rem; z-index: 20; max-width: 180px;">
+                            <p class="mb-0"
+                                style="font-size: 0.75rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em;">
+                                Main Goal</p>
+                            <p class="mb-0" style="font-size: 0.875rem; font-weight: 800; color: #1f2937;">NEP 2020
+                                Education Reform</p>
                         </div>
                     </div>
                 </div>
@@ -500,8 +494,10 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 order-lg-last">
                     <div class="asymmetric-grid">
-                        <img src="3rd.jpeg" alt="Training Workshop" class="grid-photo border-4 border-white" style="width: 50%; height: 300px; top: 1rem; right: 1rem; z-index: 10; border-radius: 0 0 4rem 0;">
-                        <img src="4th.jpeg" alt="Leadership Meeting" class="grid-photo border-4 border-white" style="width: 65%; height: 240px; bottom: 1rem; left: 1rem; z-index: 20;">
+                        <img src="3rd.jpeg" alt="Training Workshop" class="grid-photo border-4 border-white"
+                            style="width: 50%; height: 300px; top: 1rem; right: 1rem; z-index: 10; border-radius: 0 0 4rem 0;">
+                        <img src="4th.jpeg" alt="Leadership Meeting" class="grid-photo border-4 border-white"
+                            style="width: 65%; height: 240px; bottom: 1rem; left: 1rem; z-index: 20;">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -513,13 +509,19 @@
                     <h2 class="display-6 fw-bolder mb-3">How is Career Katta Organized?</h2>
                     <div class="underline-brand mb-4"></div>
                     <p class="text-secondary lh-lg mb-3">
-                        MITSC was registered under the Societies Registration Act of 1860. Its main office is at Mahila Bank Basement, Khasbag Maidan, Kolhapur. It is led by its Founder-President, <strong>Mr. Yashwant Shitole</strong>, and runs through more than 100 Youth Welfare Centers across Maharashtra.
+                        MITSC was registered under the Societies Registration Act of 1860. Its main office is at Mahila
+                        Bank Basement, Khasbag Maidan, Kolhapur. It is led by its Founder-President, <strong>Mr.
+                            Yashwant Shitole</strong>, and runs through more than 100 Youth Welfare Centers across
+                        Maharashtra.
                     </p>
                     <div class="blockquote-custom">
                         "Are you actually using your phone well — or are you just scrolling it?"
                     </div>
                     <p class="text-secondary lh-lg">
-                        At college visits across Maharashtra, Mr. Shitole encourages students to think of their career like a savings plan: invest a little time every day into learning useful skills. He urges rural students especially to spend at least 3 hours daily learning <strong>Artificial Intelligence (AI)</strong> — the technology that is changing every job in the world.
+                        At college visits across Maharashtra, Mr. Shitole encourages students to think of their career
+                        like a savings plan: invest a little time every day into learning useful skills. He urges rural
+                        students especially to spend at least 3 hours daily learning <strong>Artificial Intelligence
+                            (AI)</strong> — the technology that is changing every job in the world.
                     </p>
                     <div class="row g-3 pt-4">
                         <div class="col-6 col-md-3">
@@ -563,7 +565,9 @@
             <h2 class="display-6 fw-bolder mb-3">What Does Career Katta Actually Do?</h2>
             <div class="underline-brand mb-4"></div>
             <p class="text-secondary lh-lg mb-4" style="max-width: 56rem;">
-                Career Katta is much more than a lecture program. It is a complete learning system that connects over <strong>5,000 colleges</strong> across Maharashtra and helps more than <strong>2,00,000 students</strong> at the same time — all through their phones and the internet.
+                Career Katta is much more than a lecture program. It is a complete learning system that connects over
+                <strong>5,000 colleges</strong> across Maharashtra and helps more than <strong>2,00,000
+                    students</strong> at the same time — all through their phones and the internet.
             </p>
 
             <!-- Feature Cards -->
@@ -574,7 +578,8 @@
                             <i class="fa-solid fa-mobile-screen-button"></i>
                         </div>
                         <h3 class="h5 fw-bold mb-2">Learning on Your Phone</h3>
-                        <p class="text-secondary small lh-lg mb-0">Students can access live classes, videos, and updates through a simple Android app — no laptop or expensive equipment needed.</p>
+                        <p class="text-secondary small lh-lg mb-0">Students can access live classes, videos, and updates
+                            through a simple Android app — no laptop or expensive equipment needed.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -583,7 +588,8 @@
                             <i class="fa-solid fa-brain"></i>
                         </div>
                         <h3 class="h5 fw-bold mb-2">Smart Progress Tracking</h3>
-                        <p class="text-secondary small lh-lg mb-0">The system uses AI to track each student's progress and suggests a personalized learning plan — like having a personal career guide.</p>
+                        <p class="text-secondary small lh-lg mb-0">The system uses AI to track each student's progress
+                            and suggests a personalized learning plan — like having a personal career guide.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -592,7 +598,8 @@
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h3 class="h5 fw-bold mb-2">Verified Certificates</h3>
-                        <p class="text-secondary small lh-lg mb-0">Students get certificates that companies can easily verify online — making it easier to trust and hire Career Katta graduates.</p>
+                        <p class="text-secondary small lh-lg mb-0">Students get certificates that companies can easily
+                            verify online — making it easier to trust and hire Career Katta graduates.</p>
                     </div>
                 </div>
             </div>
@@ -612,42 +619,50 @@
                         <tbody>
                             <tr>
                                 <td>IAS Aaplya Bhetila</td>
-                                <td>Every day from 5–7 PM, IAS and government officers talk directly to students and explain how to prepare for UPSC and MPSC exams.</td>
+                                <td>Every day from 5–7 PM, IAS and government officers talk directly to students and
+                                    explain how to prepare for UPSC and MPSC exams.</td>
                                 <td>Village students who cannot afford costly coaching classes in cities.</td>
                             </tr>
                             <tr>
                                 <td>Udyojak Aaplya Bhetila</td>
-                                <td>Successful business owners meet students and teach them how to start and grow their own business — not just look for a job.</td>
+                                <td>Successful business owners meet students and teach them how to start and grow their
+                                    own business — not just look for a job.</td>
                                 <td>Students who want to become job creators, not just job seekers.</td>
                             </tr>
                             <tr>
                                 <td>Vrittavedh</td>
-                                <td>Daily news is explained in a simple way to help students answer current affairs questions in government exams.</td>
+                                <td>Daily news is explained in a simple way to help students answer current affairs
+                                    questions in government exams.</td>
                                 <td>Anyone preparing for government exams.</td>
                             </tr>
                             <tr>
                                 <td>Indian Constitution</td>
-                                <td>India's Constitution — the rule book of our country — is explained in easy language so every student understands their rights.</td>
+                                <td>India's Constitution — the rule book of our country — is explained in easy language
+                                    so every student understands their rights.</td>
                                 <td>Students, citizens, and anyone who wants to understand Indian law.</td>
                             </tr>
                             <tr>
                                 <td>EQ Club</td>
-                                <td>Helps students manage stress, handle emotions, and build confidence — important for exams and life in general.</td>
+                                <td>Helps students manage stress, handle emotions, and build confidence — important for
+                                    exams and life in general.</td>
                                 <td>Students who feel anxious or overwhelmed during exam preparation.</td>
                             </tr>
                             <tr>
                                 <td>Digital Marketing</td>
-                                <td>Teaches how to grow a business online using social media, Google, and content creation tools.</td>
+                                <td>Teaches how to grow a business online using social media, Google, and content
+                                    creation tools.</td>
                                 <td>Students who want to work from home or start a freelancing career.</td>
                             </tr>
                             <tr>
                                 <td>Communication Skills</td>
-                                <td>Helps students speak English better and improve their overall communication — a skill every company wants.</td>
+                                <td>Helps students speak English better and improve their overall communication — a
+                                    skill every company wants.</td>
                                 <td>Rural students who struggle with English in job interviews.</td>
                             </tr>
                             <tr>
                                 <td>Indian Knowledge System</td>
-                                <td>Explores India's ancient wisdom, science, and culture — and how it connects to today's world.</td>
+                                <td>Explores India's ancient wisdom, science, and culture — and how it connects to
+                                    today's world.</td>
                                 <td>Students interested in history, culture, and research.</td>
                             </tr>
                         </tbody>
@@ -661,7 +676,10 @@
                     <div class="results-badge mb-2">Real Results</div>
                     <h4 class="h5 fw-bold mb-3">Students Are Getting Jobs</h4>
                     <p class="small text-secondary mb-0">
-                        More than <strong>2,800 students</strong> have already secured government jobs after using Career Katta. Private sector placements are also growing — for example, a student named Isha used Career Katta to improve her data skills and got a job at <strong>Zeta</strong>, a top technology company.
+                        More than <strong>2,800 students</strong> have already secured government jobs after using
+                        Career Katta. Private sector placements are also growing — for example, a student named Isha
+                        used Career Katta to improve her data skills and got a job at <strong>Zeta</strong>, a top
+                        technology company.
                     </p>
                 </div>
                 <div class="text-center" style="min-width: 140px;">
@@ -685,19 +703,28 @@
                     <h2 class="display-6 fw-bolder mb-3">The 'Plan B' Idea: Always Have a Backup Plan</h2>
                     <div class="underline-brand mb-4"></div>
                     <p class="text-secondary lh-lg mb-3">
-                        Many students from villages spend years — and their family's savings — preparing for government jobs in big cities like Pune, Mumbai, or Delhi. But only a small number of students get selected. The rest often return home feeling lost, stressed, and unsure about their future.
+                        Many students from villages spend years — and their family's savings — preparing for government
+                        jobs in big cities like Pune, Mumbai, or Delhi. But only a small number of students get
+                        selected. The rest often return home feeling lost, stressed, and unsure about their future.
                     </p>
                     <p class="text-secondary lh-lg mb-3">
-                        Career Katta teaches students to always have a <strong>"Plan B"</strong> — a backup career option they are building at the same time. This way, even if a student doesn't get the government job, they already have skills and options to fall back on.
+                        Career Katta teaches students to always have a <strong>"Plan B"</strong> — a backup career
+                        option they are building at the same time. This way, even if a student doesn't get the
+                        government job, they already have skills and options to fall back on.
                     </p>
                     <p class="text-secondary lh-lg">
-                        The government is also helping by setting up <strong>Skill Development Centers</strong> and <strong>Startup Support Centers</strong> inside colleges. The goal is to support 10,000 exam students and 5,000 young business starters — giving everyone a fair chance, no matter where they come from.
+                        The government is also helping by setting up <strong>Skill Development Centers</strong> and
+                        <strong>Startup Support Centers</strong> inside colleges. The goal is to support 10,000 exam
+                        students and 5,000 young business starters — giving everyone a fair chance, no matter where they
+                        come from.
                     </p>
                 </div>
                 <div class="col-lg-5">
                     <div class="asymmetric-grid">
-                        <img src="5th.jpeg" alt="Student Counseling" class="grid-photo border-4 border-white" style="width: 55%; height: 260px; top: 1rem; left: 1rem; z-index: 10; border-radius: 3rem 0 0 0;">
-                        <img src="6th.jpeg" alt="Skill Center" class="grid-photo border-4 border-white" style="width: 60%; height: 240px; bottom: 1rem; right: 1rem; z-index: 20;">
+                        <img src="5th.jpeg" alt="Student Counseling" class="grid-photo border-4 border-white"
+                            style="width: 55%; height: 260px; top: 1rem; left: 1rem; z-index: 10; border-radius: 3rem 0 0 0;">
+                        <img src="6th.jpeg" alt="Skill Center" class="grid-photo border-4 border-white"
+                            style="width: 60%; height: 240px; bottom: 1rem; right: 1rem; z-index: 20;">
                     </div>
                 </div>
             </div>
@@ -710,8 +737,12 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 order-lg-last">
                     <div class="asymmetric-grid">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600" alt="Financial Planning" class="grid-photo border-4 border-white" style="width: 65%; height: 230px; top: 2rem; left: 0.5rem; z-index: 20;">
-                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=500" alt="University Campus" class="grid-photo border-4 border-white" style="width: 55%; height: 280px; bottom: 1rem; right: 0.5rem; z-index: 10; border-radius: 0 4rem 0 0;">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600"
+                            alt="Financial Planning" class="grid-photo border-4 border-white"
+                            style="width: 65%; height: 230px; top: 2rem; left: 0.5rem; z-index: 20;">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=500"
+                            alt="University Campus" class="grid-photo border-4 border-white"
+                            style="width: 55%; height: 280px; bottom: 1rem; right: 0.5rem; z-index: 10; border-radius: 0 4rem 0 0;">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -723,21 +754,28 @@
                     <h2 class="display-6 fw-bolder mb-3">How Much Does It Cost? And What Happened in 2025?</h2>
                     <div class="underline-brand mb-4"></div>
                     <p class="text-secondary lh-lg mb-4">
-                        Career Katta is designed to be affordable for every student. The fee is just <strong>₹365 for 3 years</strong> — that is less than ₹1 per day! This small amount is meant to be refunded to students through the college fee system. So in many cases, students get it almost free.
+                        Career Katta is designed to be affordable for every student. The fee is just <strong>₹365 for 3
+                            years</strong> — that is less than ₹1 per day! This small amount is meant to be refunded to
+                        students through the college fee system. So in many cases, students get it almost free.
                     </p>
                     <div class="alert-amber">
                         <h4 class="d-flex align-items-center gap-2 mb-2">
                             <i class="fa-solid fa-triangle-exclamation"></i> What Happened in October 2025?
                         </h4>
                         <p class="mb-3">
-                            On <strong>19 October 2025</strong>, the government made Career Katta compulsory for all college students. Universities like SPPU, NMU, and SRTMUN were asked to collect the fee by 30 November 2025. This caused some concerns:
+                            On <strong>19 October 2025</strong>, the government made Career Katta compulsory for all
+                            college students. Universities like SPPU, NMU, and SRTMUN were asked to collect the fee by
+                            30 November 2025. This caused some concerns:
                         </p>
                         <ul class="mb-2">
-                            <li><strong>Financial burden:</strong> Some students — especially those affected by recent floods — found it difficult to pay even ₹365 at that time.</li>
-                            <li><strong>College independence:</strong> Some colleges felt that making it mandatory went against their right to make their own decisions about fees.</li>
+                            <li><strong>Financial burden:</strong> Some students — especially those affected by recent
+                                floods — found it difficult to pay even ₹365 at that time.</li>
+                            <li><strong>College independence:</strong> Some colleges felt that making it mandatory went
+                                against their right to make their own decisions about fees.</li>
                         </ul>
                         <p class="mb-0">
-                            These concerns are being heard and discussed by the government to find a fair solution for everyone.
+                            These concerns are being heard and discussed by the government to find a fair solution for
+                            everyone.
                         </p>
                     </div>
                 </div>
@@ -757,11 +795,14 @@
                         <span class="fs-4 fw-bold tracking-wider">MITSC</span>
                     </div>
                     <p class="small text-white-emphasis mb-4">
-                        Maharashtra Information Technology Support Center — Helping students across Maharashtra learn, grow, and build a better future.
+                        Maharashtra Information Technology Support Center — Helping students across Maharashtra learn,
+                        grow, and build a better future.
                     </p>
                     <div class="pt-2">
-                        <a href="https://play.google.com/store/search?q=career%20katta&c=apps" target="_blank" class="d-inline-block">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height: 2.75rem; width: auto;">
+                        <a href="https://play.google.com/store/search?q=career%20katta&c=apps" target="_blank"
+                            class="d-inline-block">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play" style="height: 2.75rem; width: auto;">
                         </a>
                     </div>
                 </div>
@@ -770,11 +811,16 @@
                 <div class="col-12 col-sm-6 col-lg-2">
                     <h4 class="footer-section-title">Quick Links</h4>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="#introduction" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> About Us</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Our Team</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Recent Events</a></li>
-                        <li class="mb-2"><a href="#ecosystem" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Courses</a></li>
-                        <li><a href="#challenges" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Contact</a></li>
+                        <li class="mb-2"><a href="#introduction" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> About Us</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Our Team</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Recent Events</a></li>
+                        <li class="mb-2"><a href="#ecosystem" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Courses</a></li>
+                        <li><a href="#challenges" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Contact</a></li>
                     </ul>
                 </div>
 
@@ -782,11 +828,16 @@
                 <div class="col-12 col-sm-6 col-lg-2">
                     <h4 class="footer-section-title">Explore</h4>
                     <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="#" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Advisory Board</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Downloads</a></li>
-                        <li class="mb-2"><a href="#ecosystem" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Career Katta</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Gallery</a></li>
-                        <li><a href="#" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span> Career Sansad</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Advisory Board</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Downloads</a></li>
+                        <li class="mb-2"><a href="#ecosystem" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Career Katta</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link"><span
+                                    style="font-size: 0.625rem; opacity: 0.6;">›</span> Gallery</a></li>
+                        <li><a href="#" class="footer-link"><span style="font-size: 0.625rem; opacity: 0.6;">›</span>
+                                Career Sansad</a></li>
                     </ul>
                 </div>
 
@@ -800,7 +851,8 @@
                             </div>
                             <div class="small">
                                 <strong class="d-block mb-1 text-white">Address</strong>
-                                <span style="color: rgba(191, 219, 254, 0.8);">Mahila Bank Basement, Khasbag Maidan, Kolhapur - 416012</span>
+                                <span style="color: rgba(191, 219, 254, 0.8);">Mahila Bank Basement, Khasbag Maidan,
+                                    Kolhapur - 416012</span>
                             </div>
                         </div>
                         <div class="d-flex gap-3">
@@ -809,7 +861,8 @@
                             </div>
                             <div class="small">
                                 <strong class="d-block mb-1 text-white">Email</strong>
-                                <a href="mailto:careerkatta365@gmail.com" class="text-decoration-none" style="color: rgba(191, 219, 254, 0.8); transition: color 0.3s;">careerkatta365@gmail.com</a>
+                                <a href="mailto:careerkatta365@gmail.com" class="text-decoration-none"
+                                    style="color: rgba(191, 219, 254, 0.8); transition: color 0.3s;">careerkatta365@gmail.com</a>
                             </div>
                         </div>
                         <div class="d-flex gap-3">
@@ -818,7 +871,8 @@
                             </div>
                             <div class="small">
                                 <strong class="d-block mb-1 text-white">Phone</strong>
-                                <a href="tel:7507652555" class="text-decoration-none" style="color: rgba(191, 219, 254, 0.8); letter-spacing: 0.05em; transition: color 0.3s;">7507652555</a>
+                                <a href="tel:7507652555" class="text-decoration-none"
+                                    style="color: rgba(191, 219, 254, 0.8); letter-spacing: 0.05em; transition: color 0.3s;">7507652555</a>
                             </div>
                         </div>
                     </div>
@@ -830,7 +884,8 @@
         <div class="footer-bottom-section py-3 mt-4">
             <div class="container-lg">
                 <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
-                    <p class="mb-0 small">© 2026 <strong class="text-white fw-semibold">MITSC</strong>. All rights reserved.</p>
+                    <p class="mb-0 small">© 2026 <strong class="text-white fw-semibold">MITSC</strong>. All rights
+                        reserved.</p>
                     <div class="d-flex align-items-center gap-3">
                         <span class="text-uppercase small fw-semibold" style="opacity: 0.7;">Follow Us:</span>
                         <div class="d-flex gap-2">
@@ -859,4 +914,5 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
